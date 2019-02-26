@@ -31,22 +31,24 @@ def add_string_as_number(str_1, str_2)
 end
 
 def number_to_full_month_name(number)
-  if (number == 1)
-  return "January"
-elsif (number == 3)
-  return "March"
-elsif (number == 9)
-  return "September"
+  case number
+    when 1
+      return "January"
+    when 3
+      return "March"
+    when 9
+      return "September"
   end
 end
 
 def number_to_short_month_name(number)
-  if (number == 1)
-  return "Jan"
-elsif (number == 4)
-  return "Apr"
-elsif (number == 10)
-  return "Oct"
+  case number
+    when 1
+      return "Jan"
+    when 4
+      return "Apr"
+    when 10
+      return "Oct"
   end
 end
 
@@ -60,6 +62,6 @@ def volume_of_sphere(radius)
 end
 
 def fahrenheit_to_celsius(fahrenheit)
-  celsius = (fahrenheit - 32) * 5.0 / 9.0
+  celsius = (fahrenheit - 32) / 1.8
   return celsius.to_i
 end
